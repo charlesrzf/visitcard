@@ -1,0 +1,94 @@
+/* tipografia geral */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:'Questrial',sans-serif;
+    color:#000;
+    background:#fff;
+}
+
+/* ---------- BANNER (cabeçalho) ---------- */
+.banner{
+    position:relative;
+    height:320px;
+    background:#f2f3f7;                 /* área clara à direita */
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    padding:0 5%;
+}
+
+/* onda escura ao fundo,  curvada à direita */
+.banner::before{
+    content:"";
+    position:absolute;
+    top:0;left:0;
+    width:60%;
+    height:100%;
+    background:url('assets/wave-bg.jpg') center/cover no-repeat;
+    border-bottom-right-radius:240px;
+}
+
+/* foto do perfil */
+.profile-photo{
+    position:relative; z-index:1;       /* acima da “onda” */
+    width:180px;height:180px;
+    border-radius:50%;
+    overflow:hidden;
+    border:6px solid #fff;
+}
+.profile-photo img{width:100%;height:100%;object-fit:cover}
+
+/* logotipo GE21 */
+.logo{
+    margin-left:auto;
+    max-width:260px;
+    height:auto;
+    z-index:1;
+}
+
+/* ---------- LISTA DE CONTATOS ---------- */
+.contact-list{
+    list-style:none;
+    margin:60px auto;
+    max-width:680px;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+}
+
+.contact-list li{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    font-size:1.4rem;
+}
+
+.contact-list a{
+    color:#000;
+    text-decoration:underline;
+}
+
+/* ícones circulares */
+.icon{
+    width:52px;height:52px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;
+    font-size:24px;
+}
+
+/* coloração individual (tonalidade aproximada do design) */
+.linkedin  {background:#0077b5}
+.email     {background:#005e8c}
+.phone     {background:#0d4f83}
+.instagram {background:#0068a5}
+.globe     {background:#264e7d}
+.map       {background:#0d4f83}
+.card      {background:#005e8c}
+
+/* ---------- RODAPÉ DECORATIVO ---------- */
+.footer-art{
+    height:140px;
+    background:url('assets/footer-bg.jpg') center/cover no-repeat;
+    margin-top:80px;
+}

@@ -1,68 +1,79 @@
-/* tipografia geral */
+/* ------------- VARIÁVEIS BÁSICAS ------------- */
+:root{
+    --font-main:'Questrial',sans-serif;
+    --dark-blue:#0d4f83;
+    --mid-blue:#005e8c;
+    --linkedin:#0077b5;
+}
+
+/* RESET SIMPLES */
 *{box-sizing:border-box;margin:0;padding:0}
 body{
-    font-family:'Questrial',sans-serif;
+    font-family:var(--font-main);
     color:#000;
     background:#fff;
+    line-height:1.35;
 }
 
-/* ---------- BANNER (cabeçalho) ---------- */
+/* ------------- BANNER ------------- */
 .banner{
     position:relative;
-    height:320px;
-    background:#f2f3f7;                 /* área clara à direita */
-    overflow:hidden;
     display:flex;
     align-items:center;
-    padding:0 5%;
+    padding:clamp(1rem,3vw,2.5rem) 5%;
+    min-height:clamp(220px,28vw,320px);
 }
 
-/* onda escura ao fundo,  curvada à direita */
+/* “onda” escura */
 .banner::before{
     content:"";
-    position:absolute;
-    top:0;left:0;
-    width:60%;
-    height:100%;
+    position:absolute;inset:0;          /* cobre toda a área */
+    width:65%;                          /* visível apenas à esquerda */
     background:url('assets/wave-bg.jpg') center/cover no-repeat;
     border-bottom-right-radius:240px;
+    z-index:0;
 }
 
-/* foto do perfil */
+/* foto de perfil */
 .profile-photo{
-    position:relative; z-index:1;       /* acima da “onda” */
-    width:180px;height:180px;
+    z-index:1;
+    width:clamp(120px,18vw,180px);
+    height:clamp(120px,18vw,180px);
     border-radius:50%;
     overflow:hidden;
     border:6px solid #fff;
+    flex-shrink:0;
 }
 .profile-photo img{width:100%;height:100%;object-fit:cover}
 
-/* logotipo GE21 */
+/* logotipo */
 .logo{
-    margin-left:auto;
-    max-width:260px;
-    height:auto;
     z-index:1;
+    margin-left:auto;
+    max-width:clamp(160px,26vw,260px);
+    height:auto;
 }
 
-/* ---------- LISTA DE CONTATOS ---------- */
+/* ------------- LISTA DE CONTATOS ------------- */
+main{
+    padding:clamp(2rem,5vw,3.5rem) 5%;
+}
+
 .contact-list{
     list-style:none;
-    margin:60px auto;
+    margin:0 auto;
     max-width:680px;
     display:flex;
     flex-direction:column;
-    gap:26px;
+    gap:clamp(1.4rem,3.5vw,2rem);
 }
 
 .contact-list li{
     display:flex;
     align-items:center;
-    gap:22px;
-    font-size:1.4rem;
+    gap:clamp(1.1rem,3vw,1.6rem);
+    font-size:clamp(1.05rem,2.4vw,1.45rem);
 }
-
 .contact-list a{
     color:#000;
     text-decoration:underline;
@@ -70,25 +81,55 @@ body{
 
 /* ícones circulares */
 .icon{
-    width:52px;height:52px;
+    width:clamp(40px,10vw,54px);
+    height:clamp(40px,10vw,54px);
     border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     color:#fff;
-    font-size:24px;
+    font-size:clamp(18px,4.4vw,24px);
 }
 
-/* coloração individual (tonalidade aproximada do design) */
-.linkedin  {background:#0077b5}
-.email     {background:#005e8c}
-.phone     {background:#0d4f83}
+.linkedin  {background:var(--linkedin)}
+.email     {background:var(--mid-blue)}
+.phone     {background:var(--dark-blue)}
 .instagram {background:#0068a5}
 .globe     {background:#264e7d}
-.map       {background:#0d4f83}
-.card      {background:#005e8c}
+.map       {background:var(--dark-blue)}
+.card      {background:var(--mid-blue)}
 
-/* ---------- RODAPÉ DECORATIVO ---------- */
+/* ------------- RODAPÉ DECORATIVO ------------- */
 .footer-art{
-    height:140px;
+    height:clamp(100px,18vw,140px);
     background:url('assets/footer-bg.jpg') center/cover no-repeat;
-    margin-top:80px;
+    margin-top:clamp(2.5rem,5vw,4rem);
+}
+
+/* ------------- MEDIA QUERIES ESPECÍFICAS ------------- */
+
+/* ≤ 600 px: empilha logo e foto, centraliza */
+@media (max-width:600px){
+    .banner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .banner::before{
+        width:100%;
+        border-bottom-right-radius:0;
+    }
+    .logo{
+        margin-left:0;
+        margin-top:1.2rem;
+    }
+}
+
+/* ≥ 1280 px: limita largura total para evitar linhas muito longas */
+@media (min-width:1280px){
+    body{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    header,main,.footer-art{
+        width:1200px;                    /* largura “máxima de leitura” */
+    }
 }

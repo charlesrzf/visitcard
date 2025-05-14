@@ -17,6 +17,7 @@ body{
 
 /* ------------- BANNER ------------- */
 .banner{
+    background:#f2f3f7;   /* cinza-claro idêntico ao design original */
     position:relative;
     display:flex;
     align-items:center;

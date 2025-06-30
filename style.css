@@ -117,8 +117,8 @@ main{
         align-items:center;
     }
     .banner::before{
-        width:65%;
-        border-bottom-right-radius:240px;
+        width:100%;
+        border-bottom-right-radius:0;
     }
     .logo{
         margin-left:auto;

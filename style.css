@@ -110,16 +110,16 @@ main{
 
 /* ------------- MEDIA QUERIES ESPECÍFICAS ------------- */
 
-/* ≤ 600 px: mantém elementos lado a lado */
-@media (max-width:600px){
+/* ≤ 600 px: mantém elementos lado a lado (COM A CORREÇÃO) */
+@media (max-width: 600px){
     .banner{
         flex-direction:row;
         align-items:center;
     }
+    /* A MÁGICA ACONTECE AQUI */
     .banner::before{
-
         border-bottom-right-radius:0;
-
+        width:45%; /* << REDUZIMOS A LARGURA DA ONDA DE 65% PARA 45% */
     }
     .logo{
         margin-left:auto;

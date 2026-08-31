@@ -2,71 +2,136 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cartão – Charles Rezende Freitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Charles Rezende Freitas — GE21 Geotecnologias</title>
 
-    <!-- Font (Google) + Ícones (Font-Awesome) -->
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"
-          crossorigin="anonymous"/>
+    <meta name="description" content="Contatos profissionais de Charles Rezende Freitas, CEO & Co-Founder da GE21 Geotecnologias. Salve o contato, chame no WhatsApp, e-mail ou conecte-se.">
+    <meta name="theme-color" content="#17130f">
+
+    <!-- Open Graph / redes sociais (LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Charles Rezende Freitas — CEO & Co-Founder, GE21 Geotecnologias">
+    <meta property="og:description" content="Meus contatos profissionais em um só lugar.">
+    <meta property="og:image" content="https://charlesrzf.github.io/visitcard/assets/portrait.jpg">
+    <meta property="og:url" content="https://charlesrzf.github.io/visitcard/">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="assets/globe.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/globe.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="banner">
-    <div class="profile-photo">
-        <!-- 180 × 180 px, recortada em círculo -->
-        <img src="assets/portrait.jpg" alt="Charles Rezende Freitas">
-    </div>
+<main class="card">
 
-    <!-- logotipo GE21 (PNG com fundo transparente) -->
-    <img src="assets/ge21-logo.png" class="logo" alt="GE21 Geotecnologias">
-</header>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+        <img src="assets/globe.svg" class="hero-globe" alt="" aria-hidden="true">
 
-<main>
-    <ul class="contact-list">
-        <li>
-            <span class="icon linkedin"><i class="fab fa-linkedin-in"></i></span>
-            <a href="https://linkedin.com/in/charlesrf" target="_blank">@charlesrf</a>
-        </li>
-        <li>
-            <span class="icon email"><i class="fas fa-envelope"></i></span>
-            <a href="mailto:charles.freitas@grupoge21.com">charles.freitas@grupoge21.com</a>
-        </li>
-        <li>
-            <span class="icon phone"><i class="fas fa-phone"></i></span>
-            <a href="https://wa.me/5531991824329" target="_blank">+55 (31) 99182-4329</a>
-        </li>
-        <li>
-            <span class="icon instagram"><i class="fab fa-instagram"></i></span>
-            <a href="https://instagram.com/charlesrf_ge21" target="_blank">@charlesrf_ge21</a>
-        </li>
-        <li>
-            <span class="icon globe"><i class="fas fa-globe"></i></span>
-            <a href="https://ge21gt.com" target="_blank">ge21gt.com</a>
-        </li>
-        <li>
-            <span class="icon map"><i class="fas fa-location-dot"></i></span>
-            <a href="https://maps.app.goo.gl/yC2K1kFnB4fuzvzg9" target="_blank">BH</a>
-            |
-            <a href="https://maps.app.goo.gl/ctLDyfreE15Rmiyx8" target="_blank">SP</a>
-            |
-            <a href="https://maps.app.goo.gl/vSpYMywT3Yq9Upmg9" target="_blank">BS</a>
-            |
-            <a href="https://maps.app.goo.gl/4498vEwfUY33xCF59" target="_blank">MDZ</a>
-            |
-            <a href="https://maps.app.goo.gl/595b3GZukLXAsCVV7" target="_blank">SA</a>
-        </li>
-        <li>
-            <span class="icon card"><i class="fas fa-id-card"></i></span>
-            <a href="https://charlesrzf.github.io/card/charlesrf.vcf"
-             id="save-contact" download="charlesrf.vcf">Salvar contato</a>
-        </li>
-    </ul>
+        <button id="share" class="share-btn" type="button" aria-label="Compartilhar cartão">
+            <i class="fas fa-arrow-up-from-bracket" aria-hidden="true"></i>
+        </button>
+
+        <div class="lang" id="lang" role="group" aria-label="Idioma / Language">
+            <button type="button" data-lang="pt" aria-label="Português">PT</button>
+            <button type="button" data-lang="en" aria-label="English">EN</button>
+            <button type="button" data-lang="es" aria-label="Español">ES</button>
+            <button type="button" data-lang="zh" aria-label="中文">中</button>
+            <button type="button" data-lang="ar" aria-label="العربية">ع</button>
+        </div>
+
+        <div class="avatar">
+            <img src="assets/portrait.jpg" alt="Charles Rezende Freitas" width="160" height="160">
+        </div>
+
+        <h1 class="name">Charles Rezende Freitas</h1>
+        <p class="role" data-i18n="role">CEO &amp; Co-Founder</p>
+        <p class="company">GE21 Geotecnologias</p>
+    </header>
+
+    <!-- ============ AÇÃO PRINCIPAL ============ -->
+    <a href="https://charlesrzf.github.io/card/charlesrf.vcf"
+       id="save-contact" class="cta" download="charlesrf.vcf">
+        <i class="fas fa-user-plus" aria-hidden="true"></i>
+        <span data-i18n="save">Salvar contato</span>
+    </a>
+
+    <!-- ============ ATALHOS RÁPIDOS ============ -->
+    <nav class="quick" aria-label="Contato rápido">
+        <a class="quick-item" href="https://wa.me/5531991824329" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a class="quick-item" href="mailto:charles.freitas@grupoge21.com" aria-label="E-mail">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span data-i18n="email">E-mail</span>
+        </a>
+        <a class="quick-item" href="tel:+5531991824329" aria-label="Ligar">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <span data-i18n="call">Ligar</span>
+        </a>
+    </nav>
+
+    <!-- ============ CANAIS ============ -->
+    <nav class="links" aria-label="Canais">
+        <a class="link-item" href="https://linkedin.com/in/charlesrf" target="_blank" rel="noopener">
+            <span class="link-ico"><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
+            <span class="link-text"><span class="link-title">LinkedIn</span><span class="link-sub">@charlesrf</span></span>
+            <i class="fas fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a class="link-item" href="https://instagram.com/charlesrf_ge21" target="_blank" rel="noopener">
+            <span class="link-ico"><i class="fab fa-instagram" aria-hidden="true"></i></span>
+            <span class="link-text"><span class="link-title">Instagram</span><span class="link-sub">@charlesrf_ge21</span></span>
+            <i class="fas fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a class="link-item" href="https://ge21gt.com" target="_blank" rel="noopener">
+            <span class="link-ico"><i class="fas fa-globe" aria-hidden="true"></i></span>
+            <span class="link-text"><span class="link-title" data-i18n="site">Site</span><span class="link-sub">ge21gt.com</span></span>
+            <i class="fas fa-arrow-up-right-from-square link-arrow" aria-hidden="true"></i>
+        </a>
+
+        <!-- Escritórios (expansível) -->
+        <div class="office">
+            <button class="link-item office-toggle" type="button" id="office-toggle"
+                    aria-expanded="false" aria-controls="office-list">
+                <span class="link-ico"><i class="fas fa-location-dot" aria-hidden="true"></i></span>
+                <span class="link-text"><span class="link-title" data-i18n="offices">Escritórios</span><span class="link-sub">Belo Horizonte · Buenos Aires · Mendoza</span></span>
+                <i class="fas fa-chevron-down link-arrow office-chevron" aria-hidden="true"></i>
+            </button>
+
+            <div class="office-list" id="office-list">
+                <div class="office-inner">
+                    <a class="office-link" href="https://maps.app.goo.gl/yC2K1kFnB4fuzvzg9" target="_blank" rel="noopener">
+                        <i class="fas fa-map-pin" aria-hidden="true"></i><span>Belo Horizonte</span>
+                    </a>
+                    <a class="office-link" href="https://maps.app.goo.gl/vSpYMywT3Yq9Upmg9" target="_blank" rel="noopener">
+                        <i class="fas fa-map-pin" aria-hidden="true"></i><span>Buenos Aires</span>
+                    </a>
+                    <a class="office-link" href="https://maps.app.goo.gl/4498vEwfUY33xCF59" target="_blank" rel="noopener">
+                        <i class="fas fa-map-pin" aria-hidden="true"></i><span>Mendoza</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ RODAPÉ ============ -->
+    <footer class="footer">
+        <a class="brand" href="https://ge21gt.com" target="_blank" rel="noopener" aria-label="GE21 Geotecnologias">
+            <img src="assets/globe-mono.svg" class="brand-globe" alt="" aria-hidden="true">
+            <span class="brand-text">GE21<span class="brand-sub">Geotecnologias</span></span>
+        </a>
+    </footer>
+
 </main>
-
-<footer class="footer-art"></footer>
 
 <script src="scripts.js"></script>
 </body>
